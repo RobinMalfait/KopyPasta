@@ -18,9 +18,14 @@ In the mean time, here is a [download link](http://d.pr/f/1aGcV+).
 
 ### Usage 
 It uses your `Generate` shortcut. 
-This can be found here ![](http://d.pr/i/ptDS+)
+This can be found here 
+
+![](http://d.pr/i/ptDS+)
+
 Whenever you are in a file, or select some text you can run it:
+
 ![](http://d.pr/i/17alw+)
+
 Generate a `Kopy Pasta!` éh voila!
 
 It will open your default browser with the kopy.io link
