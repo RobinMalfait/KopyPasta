@@ -1,6 +1,6 @@
 <idea-plugin version="2">
-  <id>com.robinmalfait.RobinBin</id>
-  <name>RobinBin</name>
+  <id>com.robinmalfait.KopyPasta</id>
+  <name>KopyPasta</name>
   <version>1.2</version>
   <vendor email="malfait.robin@gmail.com" url="http://www.robinmalfait.com">Robin Malfait</vendor>
 
@@ -36,7 +36,7 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="RobinBin" class="org.robinmalfait.RobinBin.Generate" text="Kopy Pasta!" description="Save to pastebin">
+    <action id="KopyPasta" class="org.robinmalfait.KopyPasta.Generate" text="Kopy Pasta!" description="Save to pastebin">
       <add-to-group group-id="GenerateGroup" anchor="first"/>
     </action>
   </actions>

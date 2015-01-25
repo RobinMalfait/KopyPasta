@@ -1,4 +1,4 @@
-package org.robinmalfait.RobinBin;
+package org.robinmalfait.KopyPasta;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -10,18 +10,15 @@ import com.intellij.openapi.editor.VisualPosition;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Generate extends AnAction {
 
-    private String selectedTextIfAny;
-
     public void actionPerformed(AnActionEvent e) {
         String contents = getContents(e);
-        RobinBin robinBin = new RobinBin();
+        KopyPasta kopyPasta = new KopyPasta();
 
-        robinBin.save(contents);
+        kopyPasta.save(contents);
     }
 
     private String getContents(AnActionEvent e) {
@@ -36,10 +33,6 @@ public class Generate extends AnAction {
         contents = this.getEditorContents(editor);
 
         return contents;
-    }
-
-    private List<String> splitContentsInLines(String contents) {
-        return Arrays.asList(contents.split("\n"));
     }
 
     public String getEditorContents(Editor editor) {

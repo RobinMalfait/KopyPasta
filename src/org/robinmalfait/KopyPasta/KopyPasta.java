@@ -1,4 +1,4 @@
-package org.robinmalfait.RobinBin;
+package org.robinmalfait.KopyPasta;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
@@ -15,13 +15,13 @@ import java.net.URLConnection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RobinBin implements ClipboardOwner {
+public class KopyPasta implements ClipboardOwner {
 
     protected String baseURL = "http://kopy.io";
 
     public void save(String contents)
     {
-        String id = RobinBin.executePost(this.baseURL + "/documents", "raw:" + contents);
+        String id = KopyPasta.executePost(this.baseURL + "/documents", "raw:" + contents);
 
         String url = this.baseURL + "/" + id;
 

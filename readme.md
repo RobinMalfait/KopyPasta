@@ -1,4 +1,4 @@
-## RobinBin
+## KopyPasta
 
 This is a plugin for various JetBrains products. It allows you to share your code, or partials of your code with anybody!
 
@@ -41,4 +41,4 @@ Also when there is a problem, just file a new issue :)
 
 ### License
 
-The RobinBin plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The KopyPasta plugin is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
