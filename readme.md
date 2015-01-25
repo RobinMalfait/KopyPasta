@@ -7,7 +7,7 @@ This is a plugin for various JetBrains products. It allows you to share your cod
 
 The plugin itself has not yet been approved by JetBrains, but here is the [plugin link](https://plugins.jetbrains.com/plugin/7664).
 
-In the mean time, here is a [download link](http://d.pr/f/1aGcV+).
+In the mean time, here is a [download link](http://d.pr/f/14WTq+).
 
 
 ### Installation
