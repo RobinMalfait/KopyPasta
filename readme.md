@@ -29,7 +29,15 @@ Whenever you are in a file, or select some text you can run it:
 Generate a `Kopy Pasta!` éh voila!
 
 It will open your default browser with the kopy.io link
+
 It will also copy the link to your clipboard
+
+
+### Contributing
+
+I accept PR's... :)
+
+Also when there is a problem, just file a new issue :)
 
 ### License
 
