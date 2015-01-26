@@ -9,6 +9,7 @@ import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.editor.VisualPosition;
 import org.apache.commons.lang.StringUtils;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,11 @@ public class Generate extends AnAction {
         String contents = getContents(e);
         KopyPasta kopyPasta = new KopyPasta();
 
-        kopyPasta.save(contents);
+        try {
+            kopyPasta.save(contents);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
     }
 
     private String getContents(AnActionEvent e) {
