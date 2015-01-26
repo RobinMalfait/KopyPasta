@@ -7,9 +7,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.regex.Matcher;
@@ -19,33 +17,36 @@ public class KopyPasta implements ClipboardOwner {
 
     protected String baseURL = "http://kopy.io";
 
-    public void save(String contents)
-    {
-        String id = KopyPasta.executePost(this.baseURL + "/documents", "raw:" + contents);
+    public void save(String contents) throws MalformedURLException {
+        URL pasteUrl = createPasteAndGetUrl(contents);
+        copyPasteUrlToClipboard(pasteUrl);
+        openPasteInBrowser(pasteUrl);
+    }
 
-        String url = this.baseURL + "/" + id;
-
-        // Set in clipboard
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(new StringSelection(url), this);
-
-        // Open Browser
-        if(Desktop.isDesktopSupported()) {
+    private void openPasteInBrowser(URL pasteUrl) {
+        if (Desktop.isDesktopSupported()) {
             try {
-                Desktop.getDesktop().browse(new URI(url));
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (URISyntaxException e) {
+                Desktop.getDesktop().browse(pasteUrl.toURI());
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
 
-    public static String executePost(String targetURL, String data) {
+    private void copyPasteUrlToClipboard(URL pasteUrl) {
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(new StringSelection(pasteUrl.toString()), this);
+    }
+
+    private URL createPasteAndGetUrl(String contents) throws MalformedURLException {
+        String id = KopyPasta.executePost(new URL(this.baseURL + "/documents"), "raw:" + contents);
+        return new URL(this.baseURL + "/" + id);
+    }
+
+    public static String executePost(URL url, String data) {
         String result = "";
 
         try {
-            URL url = new URL(targetURL);
             URLConnection conn = url.openConnection();
             conn.setDoInput(true);
             conn.setDoOutput(true);
