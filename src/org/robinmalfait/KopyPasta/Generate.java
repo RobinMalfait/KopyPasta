@@ -21,8 +21,8 @@ public class Generate extends AnAction {
 
         try {
             kopyPasta.save(contents);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+        } catch (MalformedURLException exception) {
+            exception.printStackTrace();
         }
     }
 
