@@ -1,13 +1,17 @@
 <idea-plugin version="2">
   <id>com.robinmalfait.KopyPasta</id>
   <name>KopyPasta</name>
-  <version>1.2</version>
+  <version>1.3</version>
   <vendor email="malfait.robin@gmail.com" url="http://www.robinmalfait.com">Robin Malfait</vendor>
 
   <description><![CDATA[
-      A nice and simple plugin to share your code!
-      Your code will be send to kopy.io and the link will be in your clipboard.
-      It will also open your default browser for you!
+      <p>A nice and simple plugin to share your code!</p>
+      <p>Your code will be send to kopy.io and the link will be in your clipboard.</p>
+      <p>It will also open your default browser for you!</p>
+      <hr/>
+
+      <h3>Usage:</h3>
+      <p>In any file you can generate a new KopyPasta! just press your generate shortcut. Code -> Generate.</p>
     ]]></description>
 
   <change-notes><![CDATA[

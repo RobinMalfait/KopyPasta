@@ -10,6 +10,10 @@ This is a plugin for various JetBrains products. It allows you to share your cod
 4. Search for `KopyPasta`, if you can't find it: ![](http://d.pr/i/1aWK1+)
 5. Restart PhpStorm
 
+Here is a YouTube installation and usage video. (I have no editing software, and I almost never make videos, so have mercy :))
+
+[![Kopy Pasta installation and usage](http://img.youtube.com/vi/ZMThRRkLrAA/0.jpg)](http://www.youtube.com/watch?v=ZMThRRkLrAA)
+
 ### Usage 
 It uses your `Generate` shortcut. 
 This can be found here 
