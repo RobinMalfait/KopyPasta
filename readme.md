@@ -2,19 +2,13 @@
 
 This is a plugin for various JetBrains products. It allows you to share your code, or partials of your code with anybody!
 
-
-### How it works
-
-The plugin itself has not yet been approved by JetBrains, but here is the [plugin link](https://plugins.jetbrains.com/plugin/7668).
-
-In the mean time, here is a [download link](http://d.pr/f/1520A+).
-
-
 ### Installation
 
-1. Download the plugin (link above)
-2. Open PhpStorm -> Preferences -> Plugins -> Install plugin from disk
-3. Restart PhpStorm
+1. Open PhpStorm
+2. Preferences
+3. Plugins
+4. Search for `KopyPasta`, if you can't find it: ![](http://d.pr/i/1aWK1+)
+5. Restart PhpStorm
 
 ### Usage 
 It uses your `Generate` shortcut. 
